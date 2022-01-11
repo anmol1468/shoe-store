@@ -1,0 +1,32 @@
+.cartBox {
+  background-color: #fff;
+  box-shadow: 0.3rem 0.3rem 0.5rem 0.2rem rgba(0, 0, 0, 0.2);
+  position: absolute;
+  border-radius: 1rem;
+  min-height: 20rem;
+  height: auto;
+  width: 25rem;
+  left: -220%;
+  margin-top: 3rem;
+  padding: 1rem 0.8rem;
+
+  .title {
+    width: 100%;
+    padding: 0 0 0.5rem 0;
+    border-bottom: 1px solid rgba(182, 188, 200, 0.4);
+
+    h3 {
+      font-size: 1.8rem;
+    }
+  }
+
+  .emptyCart {
+    text-align: center;
+    padding: 3rem 0;
+    font-size: 1.3rem;
+  }
+
+  .cart {
+    height: auto;
+  }
+}

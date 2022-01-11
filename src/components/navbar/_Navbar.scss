@@ -1,0 +1,144 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 1rem 3rem 1rem;
+  border-bottom: 1px solid rgba(182, 188, 200, 0.4);
+  width: 80%;
+  margin: auto;
+
+  .linkBox-r-container {
+    display: none;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: all 0.5s;
+
+    @include respond(tab-port) {
+      display: block;
+    }
+
+    .linkBox-r {
+      display: none;
+      flex-direction: column;
+      top: 0;
+      z-index: 10;
+      height: 100%;
+      width: 30rem;
+      padding: 2.5rem 3rem;
+      background-color: #fff;
+
+      .close {
+        width: 2.5rem;
+        padding-bottom: 5rem;
+      }
+
+      @include respond(tab-port) {
+        display: flex;
+      }
+
+      &__item {
+        list-style: none;
+        margin-right: 1.8rem;
+        font-size: 1.5rem;
+        margin: 1.3rem 0;
+        font-size: 1.8rem;
+
+        a {
+          text-decoration: none;
+          transition: all 0.2s;
+          color: rgb(0, 0, 0);
+          font-weight: 700;
+          padding-bottom: 4.4rem;
+
+          &:hover {
+            border-bottom: 2px solid orange;
+          }
+        }
+      }
+    }
+  }
+
+  @include respond(tab) {
+    width: 95%;
+  }
+
+  @include respond(tab-port) {
+    padding: 2rem 2rem 3rem 2rem;
+    justify-content: space-around;
+  }
+
+  &__box1 {
+    display: flex;
+    align-items: center;
+
+    .open {
+      height: 2rem;
+      margin-right: 1.5rem;
+      display: none;
+
+      @include respond(tab-port) {
+        display: block;
+      }
+    }
+    .logo {
+      height: 2.5rem;
+      margin-right: 4rem;
+
+      @include respond(tab) {
+        margin-right: 2.5rem;
+      }
+    }
+
+    .linkBox {
+      display: flex;
+
+      @include respond(tab-port) {
+        display: none;
+      }
+
+      &__item {
+        list-style: none;
+        margin-right: 1.8rem;
+        font-size: 1.5rem;
+
+        a {
+          text-decoration: none;
+          color: hsl(219, 9%, 45%);
+          transition: all 0.2s;
+          padding-bottom: 4.4rem;
+
+          &:hover {
+            border-bottom: 2px solid orange;
+          }
+        }
+      }
+    }
+  }
+
+  &__box2 {
+    display: flex;
+    align-items: center;
+
+    @include respond(smallest-phone) {
+      display: none;
+    }
+
+    .cartContainer {
+      position: relative;
+
+      .cart {
+        height: 2.2rem;
+        margin-right: 2rem;
+      }
+    }
+
+    .user {
+      height: 5rem;
+    }
+  }
+}

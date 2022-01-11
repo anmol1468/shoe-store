@@ -1,0 +1,118 @@
+.detail {
+  width: 50%;
+
+  @include respond(phone) {
+    width: 100%;
+    padding: 2rem 3rem;
+  }
+
+  > h3 {
+    color: hsl(26, 100%, 55%);
+    letter-spacing: 1px;
+  }
+
+  h2 {
+    font-size: 4rem;
+    font-weight: 600;
+    padding: 2rem 0;
+  }
+
+  > p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    letter-spacing: 1px;
+  }
+
+  &__price {
+    padding: 1rem 0;
+    h3 {
+      font-size: 2rem;
+
+      span {
+        color: hsl(26, 100%, 55%);
+        font-size: 1.3rem;
+        background-color: hsl(25, 100%, 94%);
+        padding: 0.3rem 0.5rem;
+        border-radius: 3px;
+      }
+    }
+
+    p {
+      text-decoration: line-through;
+      color: hsl(220, 14%, 75%);
+      font-weight: 600;
+    }
+  }
+
+  &__order {
+    display: flex;
+
+    @include respond(small-phone) {
+      flex-direction: column;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30%;
+      margin-right: 2%;
+
+      @include respond(small-phone) {
+        width: 100%;
+        margin: auto;
+      }
+
+      > * {
+        width: 33%;
+        text-align: center;
+        background-color: hsl(223, 64%, 98%);
+        padding: 1rem;
+        outline: none;
+        border: transparent;
+        font-size: 1.5rem;
+      }
+
+      .decrement,
+      .increment {
+        color: hsl(26, 100%, 55%);
+        font-size: 2rem;
+        transition: all 0.3s;
+
+        &:hover {
+          color: rgba(255, 125, 26, 0.7);
+        }
+      }
+
+      .decrement {
+        border-radius: 4px 0 0 4px;
+      }
+
+      .increment {
+        border-radius: 0 4px 4px 0;
+      }
+    }
+
+    > button {
+      width: 60%;
+      flex: 1 1 60%;
+      color: #fff;
+      letter-spacing: 1px;
+      border: transparent;
+      border-radius: 5px;
+      background-color: hsl(26, 100%, 55%);
+      transition: all 0.3s;
+
+      @include respond(small-phone) {
+        width: 100%;
+        margin: 1rem auto 0 auto;
+        display: block;
+        padding: 1.2rem 0;
+      }
+
+      &:hover {
+        background: rgba(255, 125, 26, 0.75);
+      }
+    }
+  }
+}

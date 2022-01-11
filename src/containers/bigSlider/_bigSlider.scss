@@ -1,0 +1,11 @@
+.bigSlider {
+  z-index: 100;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100vh;
+  width: 100vw;
+
+  @include respond(phone) {
+    display: none;
+  }
+}

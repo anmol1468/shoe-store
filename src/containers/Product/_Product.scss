@@ -1,0 +1,13 @@
+.product {
+  display: flex;
+  width: 75%;
+  margin: 6rem auto;
+  justify-content: space-between;
+
+  @include respond(phone) {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin: auto;
+  }
+}
