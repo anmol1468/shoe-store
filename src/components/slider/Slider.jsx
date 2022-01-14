@@ -4,7 +4,7 @@ import images from '../../imagesExport';
 import Right from '../../images/icon-next.svg'
 import Left from '../../images/icon-previous.svg'
 
-const Slider = ({big}) => {
+const Slider = ({big, bigSliderSwitch}) => {
   const [showActive, setShowActive] = useState(2)
 
   function nextImg () {
@@ -22,7 +22,7 @@ const Slider = ({big}) => {
     <div className={`slider ${big? "big" : ''}`}>
       <div className={`slider__show ${big? "big" : ''}`}>
         <button className={`arrow left ${big? "big" : ''}`} onClick={prevImg}><img src={Left} alt="previous" /></button>
-        <img src={images.display[showActive]} className='display-img' alt="image" />
+        <img src={images.display[showActive]} className='display-img' alt="image" onClick={bigSliderSwitch} />
         <button className={`arrow right ${big? "big" : ''}`} onClick={nextImg}><img src={Right} alt="next" /></button>
       </div>
       <div className={`slider__select ${big? "big" : ''}`}>

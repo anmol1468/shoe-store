@@ -4,6 +4,15 @@
   background-color: rgba(0, 0, 0, 0.6);
   height: 100vh;
   width: 100vw;
+  text-align: center;
+  padding: 1rem 0;
+  // display: flex;
+  // flex-flow: column nowrap;
+
+  &__close {
+    color: #fff;
+    font-size: 2rem;
+  }
 
   @include respond(phone) {
     display: none;

@@ -6,7 +6,7 @@
     margin: auto;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-46%);
   }
 
   @include respond(phone) {
@@ -21,12 +21,9 @@
     &.big {
       // min-width: 30rem;
       // max-width: 30rem;
-      width: 50rem;
+      width: 40rem;
+      padding: 0;
       margin: auto;
-
-      @include respond(tab) {
-        width: 45rem;
-      }
 
       .display-img {
         width: 100%;
