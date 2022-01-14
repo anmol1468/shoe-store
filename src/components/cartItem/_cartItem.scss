@@ -10,4 +10,13 @@
     height: 5rem;
     border-radius: 1rem;
   }
+
+  &__description {
+    span {
+      color: #000;
+      font-size: 120%;
+      margin-left: 0.3rem;
+      font-weight: 600;
+    }
+  }
 }

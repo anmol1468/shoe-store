@@ -5,7 +5,7 @@ import Product from './containers/Product/Product';
 import BigSlider from './containers/bigSlider/BigSlider';
 
 function App() {
-  const [bigSlider, setBigslider] = useState(false);
+  const [bigSlider, setBigslider] = useState(true);
   const [cartItems, setCartItems] = useState([]);
 
   return (

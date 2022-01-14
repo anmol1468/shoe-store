@@ -2,8 +2,11 @@
   width: 70%;
 
   &.big {
-    width: 50%;
+    width: 100%;
     margin: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   @include respond(phone) {
@@ -16,11 +19,17 @@
     display: flex;
 
     &.big {
-      width: 100%;
+      // min-width: 30rem;
+      // max-width: 30rem;
+      width: 50rem;
       margin: auto;
 
+      @include respond(tab) {
+        width: 45rem;
+      }
+
       .display-img {
-        width: auto;
+        width: 100%;
       }
     }
 
